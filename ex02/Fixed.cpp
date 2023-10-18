@@ -6,7 +6,7 @@
 /*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:46 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 16:19:01 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/18 16:23:33 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,22 +80,22 @@ std::ostream &operator<<( std::ostream &os, const Fixed &fixed_point_value)
 	return os;
 }
 
-Fixed Fixed::min(Fixed& object1, Fixed& object)
+Fixed Fixed::staticMin(Fixed& object1, Fixed& object)
 {
 
 }
 
-Fixed Fixed::min(const Fixed& object1, const Fixed& object)
+Fixed Fixed::staticMin(const Fixed& object1, const Fixed& object)
 {
 
 }
 
-Fixed Fixed::max(Fixed& object1, Fixed& object)
+Fixed Fixed::staticMax(Fixed& object1, Fixed& object)
 {
 
 }
 
-Fixed Fixed::max(const Fixed& object1, const Fixed& object)
+Fixed Fixed::staticMax(const Fixed& object1, const Fixed& object)
 {
 
 }
