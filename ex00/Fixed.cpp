@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:14 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 00:08:10 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/18 12:46:47 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,8 @@ Fixed::Fixed(const Fixed& object)
 Fixed& Fixed::operator=(const Fixed &object)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this == &object)
-    {
-        return *this;
-    }
-    this->fixed_point_value = object.getRawBits();
+    if (this != &object)
+    	this->fixed_point_value = object.getRawBits();
     return *this;
 }
 
