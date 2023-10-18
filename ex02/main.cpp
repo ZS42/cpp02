@@ -6,7 +6,7 @@
 /*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:58 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 22:50:01 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/19 00:23:17 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main( void ) 
 {
-    bool bool1;
     Fixed a;
     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
     std::cout << a << std::endl;
@@ -36,5 +35,19 @@ int main( void )
     std::cout << "extra test " << d << std::endl;
     Fixed const e( Fixed( 5.05f ) / Fixed( 2 ) );
     std::cout << "extra test " << e << std::endl;
+    Fixed const f( Fixed( 5.05f ) * Fixed( 2 ) );
+    if (d > e)
+        std::cout << "extra test > " << std::endl;
+    if (e < d)   
+        std::cout << "extra test <" << std::endl;
+    if (e >= d)    
+        std::cout << "extra test >=" << std::endl;
+    if (e <= d)    
+        std::cout << "extra test <=" << std::endl;
+    if  (b == f)  
+        std::cout << "extra test ==" << std::endl;
+    if (e != d)    
+        std::cout << "extra test !=" << std::endl;
+    
     return 0;
 }
