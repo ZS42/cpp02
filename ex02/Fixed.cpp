@@ -6,7 +6,7 @@
 /*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:46 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 14:53:51 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/18 16:19:01 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Fixed::Fixed(const Fixed& object)
 {
     std::cout << "Copy constructor called" <<std::endl;
     *this = object;
-    // this->fixed_point_value = object.fixed_point_value;
 }
 
 Fixed& Fixed::operator=(const Fixed &object)
@@ -79,4 +78,24 @@ std::ostream &operator<<( std::ostream &os, const Fixed &fixed_point_value)
 {
 	os << fixed_point_value.toFloat();
 	return os;
+}
+
+Fixed Fixed::min(Fixed& object1, Fixed& object)
+{
+
+}
+
+Fixed Fixed::min(const Fixed& object1, const Fixed& object)
+{
+
+}
+
+Fixed Fixed::max(Fixed& object1, Fixed& object)
+{
+
+}
+
+Fixed Fixed::max(const Fixed& object1, const Fixed& object)
+{
+
 }
