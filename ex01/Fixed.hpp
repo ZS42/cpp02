@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
+/*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:37 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 13:57:55 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/18 19:47:40 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ class Fixed
         int toInt( void ) const;
 };
 
-std::ostream &operator<<( std::ostream & out, const Fixed &f);
+std::ostream &operator<<( std::ostream & os, const Fixed &f);
 #endif
