@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+         #
+#    By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 20:31:50 by zsyyida           #+#    #+#              #
-#    Updated: 2023/10/16 20:31:52 by zsyyida          ###   ########.fr        #
+#    Updated: 2023/10/18 00:43:26 by zsyyida          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = a.out
 
 
 CXX = c++
@@ -19,7 +19,7 @@ RM	= rm -rf
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 #-fsanitize=address
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 
