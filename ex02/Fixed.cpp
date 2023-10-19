@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:46 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 22:35:23 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/19 16:37:50 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ std::ostream &operator<<( std::ostream &os, const Fixed &fixed_point_value)
 }
 
         // comparision operators
-			
+
 bool Fixed::operator>(const Fixed& object) const
 {
     return this->getRawBits() > object.getRawBits();
@@ -117,22 +117,38 @@ bool Fixed::operator!=(const Fixed& object) const
 
 Fixed Fixed::operator+(const Fixed& object)
 {
-    return (this->toFloat() + object.toFloat());
+	Fixed   res;
+
+    res.setRawBits(fixed_point_value + object.getRawBits());
+    return (res);
+    // return (this->toFloat() + object.toFloat());
 }
 
 Fixed Fixed::operator-(const Fixed& object)
 {
-    return (this->toFloat() - object.toFloat());
+	Fixed   res;
+
+    res.setRawBits(fixed_point_value - object.getRawBits());
+    return (res);
+    // return (this->toFloat() - object.toFloat());
 }
 
 Fixed Fixed::operator*(const Fixed& object)
 {
-    return (this->toFloat() * object.toFloat());
+	Fixed   res;
+
+    res.setRawBits(((long long)fixed_point_value * object.getRawBits()) >> 8);
+    return (res);
+    // return (this->toFloat() * object.toFloat());
 }
 
 Fixed Fixed::operator/(const Fixed& object)
 {
-    return (this->toFloat() / object.toFloat());
+	Fixed   res;
+
+    res.setRawBits((((long long)fixed_point_value << 8) / object.getRawBits()));
+    return (res);
+    // return (this->toFloat() / object.toFloat());
 }
 
 		// increment decrement operators
@@ -145,6 +161,7 @@ Fixed Fixed::operator++()
 }
 
 //post increment called postfix
+// look at implementation in cplusplus to increment by 1 using operator++ instead
 // here int is a dummy parameter to differentiate between pre and postfix
 Fixed Fixed::operator++(int)
 {
@@ -154,7 +171,7 @@ Fixed Fixed::operator++(int)
     return (temp);
 }
 
- // pre decrement 
+ // pre decrement
 Fixed Fixed::operator--()
 {
     this->fixed_point_value--;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zsyyida <zsyyida@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: zsyyida <zsyyida@student42abudhabi.ae>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:32:50 by zsyyida           #+#    #+#             */
-/*   Updated: 2023/10/18 22:39:38 by zsyyida          ###   ########.fr       */
+/*   Updated: 2023/10/19 11:25:52 by zsyyida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class Fixed
         Fixed(const float floating_point);
         Fixed(const Fixed& object);
         Fixed& operator=(const Fixed& object);
-		
+
 		// comparison operators
-			// if operator function is defined in class first argument is obviosly object of that class 
+			// if operator function is defined in class first argument is obviosly object of that class
 			// (left hand side parameter)so we can define operator with only the right hand side parameter
 			// comparision operators unlike in global ones.
 			// const at end of function means that operator function will not change any members of class and before parameter
@@ -43,7 +43,7 @@ class Fixed
 		bool operator!=(const Fixed& object) const;
 
 		// arithmetic operators
-		
+
 			// const before parameter means that parameter will not be changed inside function
 		Fixed operator+(const Fixed& object);
 		Fixed operator-(const Fixed& object);
